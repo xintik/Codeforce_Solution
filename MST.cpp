@@ -8,6 +8,9 @@ int main()
 	vector < vector < int > > graph(n);
 	vector < int > degree(n , 0);
 
+   queue< int > qr;
+
+	vector < int > ans;
 
 
 	for(int i = 0; i < m; i++)
@@ -20,10 +23,7 @@ int main()
 		degree[v]++;
 	}
 
-	queue< int > qr;
-
-	vector < int > ans;
-
+	
 	for(int i = 0; i < n; i++)
 	{
 		if(degree[i] == 1)
@@ -40,13 +40,16 @@ int main()
 		{
 		int curr = qr.front();
 		qr.pop();
-		ans.push_back(curr);
-		for(auto &it : graph[curr])
+		ans.push_back(curr); // add updade level
+
+		for(auto &it : graph[curr]) // travarce the neighbor  
 		{
           degree[it]--;
           if(degree[it] == 1) qr.push(it);
 		}
 		}
+		// as bfs , print , visit[true] , visit all neighbor ; 
+		// print goes to ans , visit is degree-- and visit all neighbors;
 		
 	}
 

@@ -10,9 +10,8 @@ int main() {
 
     while (t--) {
         int n;
-        cin >> n;
         string s;
-        cin >> s;
+        cin >> n >> s;
 
         int open = 0, close = 0;
 

@@ -11,29 +11,11 @@ const int N = 3e5;
 
 
 void solve() {
-  ll n;
-  cin >> n;
-  string str;
-  cin >> str;
-  ll open = 0 , close = 0;
-  ll  zero_component = 0;
-  for(int i = 0; i < n; i++)
-  {
-    if(str[i] == '(') open++;
-    else close++;
-   
-  }
-
- ll mx_len = min(open , close) * 2;
- if(mx_len == n) 
-  {
-    cout << n-2 << nl;
-    return;
-  }
-
- if(mx_len <= 0) cout << "-1\n";
- else cout << mx_len << nl;
-  }
+       ll n , m , d;
+       cin >> n >> m >> d;
+       ll k = (d/m )+ 1;
+       cout << (n + k - 1) / k << endl;
+}
    
    
 

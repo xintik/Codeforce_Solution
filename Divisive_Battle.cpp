@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+
+
+
 void solve() {
 
     int n;
@@ -40,7 +44,7 @@ void solve() {
     cout << "Bob\n";
     return;
   }
-    cout << "Alice\n";
+  cout << "Alice\n";
 }
 
 int main() {

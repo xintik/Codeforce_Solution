@@ -15,6 +15,9 @@ void solve() {
   cin >> n ;
   vector < int > a(n) ;
     for(int i = 0; i < n; i++) cin >> a[i];
+
+    
+
     
      vector < int > d(n+2 , 0);
 
@@ -32,7 +35,17 @@ void solve() {
 
       cout << nl;
 
-   
+    // int ax = 0, bx = 0 , cx = 0;
+
+    // for(auto &y : b)
+    //   {
+    //     if(d[y] == n) ax++;
+    //    else if(d[y] == 0) bx++;
+    //     else cx++;
+    //    }
+
+    //     if(cx%2 + ax > bx) cout << "Alice\n";
+    //     else cout << "Bob\n";
   }
    
    
